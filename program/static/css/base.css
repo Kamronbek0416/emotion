@@ -1,0 +1,64 @@
+/* Основной фон страницы */
+body {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Навбар */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Контейнер для карточек */
+.container {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1); /* Лёгкая прозрачность для контейнера */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Карточка — мягкий теплый цвет */
+.card {
+    background: #ffffff; /* Белая карточка для контраста */
+    border: none; /* Убираем стандартные границы */
+    border-radius: 12px; /* Скругленные края */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Слабая тень */
+    color: #2C3E50; /* Тёмно-синий текст */
+}
+
+/* Заголовок внутри карточки */
+.card-title {
+    font-weight: bold;
+    color: #4CA1AF; /* Акцентный цвет текста */
+}
+
+/* Элементы списка */
+.list-group-item {
+    background: rgba(76, 161, 175, 0.2); /* Светлый акцент карточки */
+    color: #2C3E50; /* Тёмный текст */
+    border: none;
+}
+
+/* Бейджики */
+.badge {
+    background-color: #4CA1AF; /* Цвет бейджика — акцент */
+    color: #ffffff; /* Белый текст для бейджиков */
+    font-size: 0.9rem;
+}
+
+/* Изображение внутри карточки */
+.card img {
+    border-radius: 12px 12px 0 0; /* Скругляем только верхние углы */
+    object-fit: cover;
+    max-height: 200px; /* Фиксируем высоту для сохранения пропорций */
+}
+
+/* Тело карточки */
+.card-body {
+    padding: 20px;
+}

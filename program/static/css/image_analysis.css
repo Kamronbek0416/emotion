@@ -1,0 +1,22 @@
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    form {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    img {
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center mt-3">Распознавание эмоций (Фото)</h1>
+<div class="d-flex flex-column align-items-center" style="display: flex; flex-direction: row; align-items: flex-start; flex-wrap: wrap;">
+    <form id="uploadForm" enctype="multipart/form-data" class="mt-3 w-100" style="max-width: 300px;">
+        <input type="file" id="fileInput" name="image" accept="image/*" class="form-control mb-2" required>
+        <button type="submit" class="btn btn-primary">Анализировать Фото</button>
+    </form>
+
+    <img id="outputImage" alt="Uploaded Image" class="d-none rounded border mt-3" style="max-width: 90%; height: auto; margin-right: 20px; border: 1px solid #ddd;">
+    <div id="result" class="text-center mt-3 w-100 d-flex justify-content-center align-items-center" style="flex: 1; height: auto;"></div>
+</div>
+
+<div id="spinner" class="spinner-border text-primary d-none" role="status" style="margin: 10px auto;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<script src="{{ url_for('static', filename='js/image_analysis.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/image_analysis.css') }}">
+{% endblock %}

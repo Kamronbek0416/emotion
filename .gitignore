@@ -1,0 +1,8 @@
+# Файл .gitignore
+*.pyc
+__pycache__/
+*.db
+*.sqlite3
+.venv/
+uploads/
+results/

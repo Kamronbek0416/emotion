@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="text-align: center; margin-bottom: 20px;">Распознавание эмоций (Реальное время)</h1>
+
+<div style="text-align: center; margin-bottom: 20px;">
+    <button onclick="startRealTime()" style="padding: 10px 20px; background-color: #1ABC9C; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        Начать анализ
+    </button>
+    <button onclick="stopRealTime()" style="padding: 10px 20px; background-color: #E74C3C; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-left: 10px;">
+        Стоп
+    </button>
+</div>
+
+<div class="video-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <video id="video" autoplay playsinline class="hidden" style="margin-top: 20px; max-width: 100%; border: 3px solid #2980B9; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"></video>
+    <canvas id="canvas" class="hidden" style="display: none;"></canvas>
+</div>
+
+<p id="realTimeResult" class="result" style="text-align: center; font-size: 18px; font-style: italic; color: #34495E; margin-top: 20px;">
+    Ожидание анализа...
+</p>
+
+<script src="{{ url_for('static', filename='js/real_time_analysis.js') }}"></script>
+{% endblock %}
